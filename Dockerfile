@@ -15,7 +15,8 @@ WORKDIR /tmp
 RUN \
 	wget https://d-mp.org/downloads/release/v$version/DMPServer.zip && \
 	unzip DMPServer.zip && \
-	cp -vr DMPServer /opt/dmp
+	mv DMPServer /opt/dmp && \
+	rm DMPServer.zip
 	
 VOLUME /opt/dmp/Universe
 VOLUME /opt/dmp/Config
