@@ -1,13 +1,9 @@
-FROM ubuntu:18.04
+FROM mono
 
 RUN \
 	apt-get update && \
-	apt install -y gnupg ca-certificates wget unzip && \
-	apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF && \
-	echo "deb https://download.mono-project.com/repo/ubuntu stable-bionic main" | tee /etc/apt/sources.list.d/mono-official-stable.list && \
-	apt update && \
-	apt install -y mono-devel 
-
+	apt install -y wget unzip && \
+	apt-get clean
 WORKDIR /tmp
 
 ENV version=0.3.2.1
