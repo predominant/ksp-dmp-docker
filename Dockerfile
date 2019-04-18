@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-ENV version=0.3.1.0
+ENV version=0.3.2.0
 ENV file=v$version.tar.gz
 
 RUN \
