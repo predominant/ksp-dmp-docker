@@ -1,8 +1,5 @@
 FROM ubuntu:18.04
 
-ENV version=0.3.2.0
-ENV file=v$version.tar.gz
-
 RUN \
 	apt-get update && \
 	apt install -y gnupg ca-certificates wget unzip && \
@@ -12,6 +9,10 @@ RUN \
 	apt install -y mono-devel 
 
 WORKDIR /tmp
+
+ENV version=0.3.2.1
+ENV file=v$version.tar.gz
+
 RUN \
 	wget https://d-mp.org/downloads/release/v$version/DMPServer.zip && \
 	unzip DMPServer.zip && \
