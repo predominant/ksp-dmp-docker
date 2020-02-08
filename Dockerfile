@@ -6,7 +6,7 @@ RUN \
 	apt-get clean
 WORKDIR /tmp
 
-ENV version=0.3.2.1
+ENV version=0.3.4.1
 ENV file=v$version.tar.gz
 
 RUN \
