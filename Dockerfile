@@ -10,7 +10,7 @@ ENV version=0.3.5.1
 ENV file=v$version.tar.gz
 
 RUN \
-	wget https://d-mp.org/downloads/release/v$version/DMPServer.zip && \
+	wget https://d-mp.org/builds/release/v$version/DMPServer.zip && \
 	unzip DMPServer.zip && \
 	mv DMPServer /opt/dmp && \
 	rm DMPServer.zip
